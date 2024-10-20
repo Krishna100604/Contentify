@@ -1,4 +1,3 @@
-
 import Templates from '@/app/(data)/Templates'
 import { Button } from '@/components/ui/button'
 import { db } from '@/utils/db'
