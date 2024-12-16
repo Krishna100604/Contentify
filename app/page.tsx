@@ -4,7 +4,6 @@ import { useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import Page from "./(auth)/sign-in/[[...sign-in]]/page";
 
 export default function Home() {
   const { isSignedIn } = useUser(); // Get the signed-in status
@@ -12,7 +11,7 @@ export default function Home() {
 
   const handleGetStartedClick = () => {
     if (!isSignedIn) {
-      router.push("/Page"); // Redirect to the sign-in page if not signed in
+      router.push("/dashboard"); // Redirect to the sign-in page if not signed in
     } else {
       router.push("/dashboard"); // Go to the dashboard if signed in
     }
@@ -42,7 +41,7 @@ export default function Home() {
                 </Link>
               ) : (
                 <Link
-                  href="/sign-in"
+                  href="/dashboard"
                   className="flex items-center gap-x-2 font-medium text-gray-500 hover:text-blue-600"
                 >
                   Sign In
