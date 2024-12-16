@@ -11,7 +11,7 @@ export default function Home() {
 
   const handleGetStartedClick = () => {
     if (!isSignedIn) {
-      router.push("/sign-in"); // Redirect to the sign-in page if not signed in
+      router.push("/sign-up"); // Redirect to the sign-in page if not signed in
     } else {
       router.push("/dashboard"); // Go to the dashboard if signed in
     }
